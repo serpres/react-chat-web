@@ -3,7 +3,8 @@ import { IMessageData } from "../../types/IMessageData.interface";
 import { IUser } from "../../types/IUser.interface";
 
 const socket = io.connect(
-  process.env.REACT_APP_API_URL || "http://localhost:3001"
+  process.env.REACT_APP_API_URL ||
+    "https://tranquil-bastion-08171.herokuapp.com/"
 );
 
 export const onReceiveMessage = (listener: (data: IMessageData) => void) => {
